@@ -29,7 +29,8 @@ func Execute() {
 
 func init() {
 	// Persistent flags available to all subcommands
-	rootCmd.PersistentFlags().BoolP("verbose", "v", false, "enable verbose output")
+	// Note: defaulting verbose to true for my personal use since I always want detailed output
+	rootCmd.PersistentFlags().BoolP("verbose", "v", true, "enable verbose output")
 	rootCmd.PersistentFlags().StringP("config", "c", "", "config file (default is $HOME/.ccx.yaml)")
 }
 
